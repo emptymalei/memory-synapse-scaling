@@ -1,5 +1,5 @@
 #include <iostream>
-// #include "includes/geometry.h"
+#include "includes/geometry.h"
 #include "includes/initializer.h"
 #include "includes/model.h"
 
@@ -29,6 +29,12 @@ int main() {
     cout << "potArray[0][0] is " << potArray[0][0] << endl;
     cout << "wArray[0][0] is " << wArray[0][0] << endl;
 
+
+    // Test Array2D class in geometry.h
+    Array2D arr2d(10,5);
+    cout << "arr2d[0][0] is " << arr2d[0][0] << endl;
+
+    // Test model.h
     cout << model::activity(1.0,1.0,1.0,1.0) << endl;
 
     cout << "End of Program." << endl;
