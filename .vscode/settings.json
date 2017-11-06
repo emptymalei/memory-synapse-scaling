@@ -7,6 +7,11 @@
       "new": "cpp",
       "stdexcept": "cpp",
       "typeinfo": "cpp",
-      "ostream": "cpp"
+      "ostream": "cpp",
+      "cmath": "cpp",
+      "iosfwd": "cpp",
+      "iterator": "cpp",
+      "vector": "cpp",
+      "array": "cpp"
    }
 }

@@ -35,6 +35,10 @@ public:
     Proxy operator[](int index) {
         return Proxy(_arrayofarrays[index]);
     }
+
+    void set( int m, int n, double newvalue) {
+        _arrayofarrays[m][n] = newvalue;
+    }
    
    ~Array2D()
    {
@@ -54,7 +58,8 @@ private:
 };
 
 
-
+// WeightArray has many problems and is not in use.
+// Probably should not use it at all.
 class WeightArray {
 public:
    WeightArray(const int rown, const int coln) {
