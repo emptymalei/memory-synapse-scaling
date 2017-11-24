@@ -14,7 +14,7 @@ namespace Solver{
    void euler( Array2D* actA2, Array2D* potA2, Array2D* weiEA2, Array2D* weiIA2, Array2D* TactA2, Array2D* TpotA2, Array2D* TweiEA2, Array2D* TweiIA2, int geodim[2], double dt, vector<double> params, vector<double> wparams, vector<double> extparams ){
       // params = {alpha, beta, epsilon, tau, resistance}
       // extparams = {w, frequency, background}
-
+      // TactA2, TpotA2, ... these are the array to be stored. The seperation of the calculation and the storage is to parallel the algorithm.
       
       int wlen = geodim[0]*geodim[1];
 
@@ -55,7 +55,7 @@ namespace Solver{
                   double actb = (*actA2)[ai][bj];
 
                   double weiENew = (*weiEA2)[widx1][widx2] + dt * Model::dwEdt( acta, actb, wparams[0], wparams[1], wparams[2] );
-                  // double dwEdt( double acti, double actj, double mu, double kappa, double actt, double dt) {
+                  // double dwEdt( double acti, double actj, double mu, double kappa, double actt) {
                      (*TweiEA2).set(widx1, widx2, weiENew);
               }
             }
